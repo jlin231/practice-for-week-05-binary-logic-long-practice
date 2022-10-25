@@ -8,10 +8,15 @@ const addZeros = require('../utils/addZeros');
 
 const asciiTo8bit = str => {
   // Your code here
+  let output = "";
+  for (let i = 0; i < str.length; i++) {
+    let base10 = str.charCodeAt(i);
+    output += addZeros(base10.toString(2), 8)
+  }
+  return output; 
 };
 
 /******************************************************************************/
-
 console.log(asciiTo8bit('123'));
 // 001100010011001000110011
 

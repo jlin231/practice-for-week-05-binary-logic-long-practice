@@ -22,7 +22,15 @@ const binaryStringToArray = str => {
 };
 
 const binaryToAscii = str => {
-  // Your code here
+  let arr = binaryStringToArray(str);
+  let output = ""
+  for (let i = 0; i < arr.length; i++) {
+    //binary to decimal
+    let base10 = parseInt(arr[i], 2);
+    //decimal to ascii
+    output += String.fromCharCode(base10);
+  }
+  return output
 };
 
 /******************************************************************************/
